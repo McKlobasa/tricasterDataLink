@@ -17,9 +17,11 @@ Pošiljanje podatkov v Newtek grafike
 
 ## dokumentacija:
 - [newtek dokumentacija za avtomatizacijo in macroje](https://www.newtek.com/blog/tips/introduction-to-tricaster-macros-and-automation/)
-... pridejo še ta pomembne stvari iz tle notri
-... str 61 - HTTP
+⋅⋅⋅ pridejo še ta pomembne stvari iz tle notri
+⋅⋅⋅ str 61 - HTTP
 > Using a simple text editor, anyone conversant with HTML can create useful webbrowser ‘applets’ that can interoperate with NewTek systems.  Add programming knowledge (say, javascript or Python for example) and a whole world of possibilities open up.The internal web server can be addressed as in this example:
-... da se pošiljati tudi file str 64
+
+⋅⋅⋅ da se pošiljati tudi file str 64
 > It  is  possible  to  send  media  files  directly  to  a NewTek  live  video  mixervia  HTTPpost  commands.
-... Če bi hoteli imeti kasneje kontrolo nad več stvarmi bi verjetno morali uporabiti websocket, ampak se mi zdi zaenkrat glede na to da je povezava zelo enosmerna bolj smiselno imetil samo http server.
+
+⋅⋅⋅ Če bi hoteli imeti kasneje kontrolo nad več stvarmi bi verjetno morali uporabiti websocket, ampak se mi zdi zaenkrat glede na to da je povezava zelo enosmerna bolj smiselno imetil samo http server.
