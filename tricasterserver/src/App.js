@@ -13,7 +13,7 @@ function App() {
       /> 
       <button
         onClick={() => {
-          const url = `${IP}/v1/datalink?key=${datalinkime}&value=${text}`
+          const url = `http://${IP}/v1/datalink?key=${datalinkime}&value=${text}`
 
           fetch(url)
             .then((response) => {
