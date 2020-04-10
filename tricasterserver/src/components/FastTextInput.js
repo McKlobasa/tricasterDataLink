@@ -3,22 +3,12 @@ import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
 
-const Container = styled.div`
-  flex: 1;
-  flex-direction:row;
-  flex-wrap: nowrap;
-  position:relative;
-  height: 100%;
-  width: 100%;
-  align-items: stretch;
-`
 const Input = styled.input`
   background-color: white;
   border: 1px solid lightgrey;
   border-radius: 4px;
-  height: 25px;
-  margin: 5px;
-  padding: 3px;
+  height: 100%;
+  width: 100%;
   color: var(--textColor);
   outline: none;
   &:focus {
@@ -26,17 +16,15 @@ const Input = styled.input`
     border: 1px solid grey;
   }
 `
+const Label = styled.label`
+  color: dark grey;
+  font-size: 1em;
+`
 
 function FastTextInput (props) {
-  const [tempText, setTempText] = useState(props.text)
-  
+  const handleChange = (event) => props.setText(event.target.value)   
   return (
-    <Container>
-      <Input 
-        onChange={(event) => setTempText(event.target.value)}
-        onBlur={(event) => props.setText(tempText)}
-      />
-    </Container>
+    <Input type="text" value={props.text} onChange={handleChange} />        
   )
 }
 

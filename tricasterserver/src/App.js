@@ -1,31 +1,29 @@
-import React, { useState } from 'react'
-import './App.css'
-import TextInput from './components/FastTextInput.js'
+import React, { useState, useEffect } from 'react'
+  import TextInput from './components/FastTextInput.js'
+  import Panel from './components/Panel.js'
+  import newTek from './newTek.js'
+  import styled from 'styled-components'
 
-function App() {
-  const [text, setText] = useState('tuki je en text')
-  const IP = '192.168.1.2'
-  const dataLinkName = 'datalinkime'
-  return (
-    <div className="App">
-      <TextInput 
-        setText={setText}
-      /> 
-      <button
-        onClick={() => {
-          const url = `http://${IP}/v1/datalink?key=${datalinkime}&value=${text}`
 
-          fetch(url)
-            .then((response) => {
-              return response.json();
-            })
-            .then((data) => {
-              console.log(data);
-            });
-        }}
-      />
-    </div>
-  );
-}
+  const Container = styled.div`
+    display: flex;
+    flex-direction: row;
+  `
 
-export default App
+  function App() {
+    const [text, setText] = useState('burekJem')
+
+    const [IP, setIP] = useState('localhost')
+    return (
+      <div>
+        <TextInput text={IP} setText={setIP} />
+        <Container>
+          <Panel 
+            IP={IP}
+          />
+        </Container>
+      </div>
+    );
+  }
+
+  export default App
